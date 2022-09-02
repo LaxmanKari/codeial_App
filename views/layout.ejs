@@ -1,0 +1,23 @@
+<html>
+    <head>
+  <title>
+    <%= title %> 
+  </title>
+  <link rel="stylesheet" href="/css/layout.css">
+  <!-- helps in placing styles(other css's ex: user_profile.css) in correct place -->
+  <%- style %> 
+    </head>
+
+    <body>
+
+        <!-- to include _header file here -->
+        <%- include('_header'); %> 
+       
+        <!-- variable -->
+       <%- body %>
+        
+        <%- include('_footer'); %> 
+
+        <%- script %> 
+    </body>
+</html>
