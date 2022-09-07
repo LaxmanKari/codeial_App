@@ -3,9 +3,26 @@ const User = require('../models/user');
 
 
 module.exports.profile = function(req,res){
-    return res.render('user_profile',{
-      "title": "User profile"
-    })
+    if(req.cookies.user_id){
+      User.findById(req.cookies.user_id,function(err,user){
+        if(user){
+          return res.render('user_profile',{
+            title: "User Profile", 
+            user: user
+          })
+        } else {
+          //also users can alter cookies and send request to handle that
+          //we are checking in the db
+           return res.redirect('/users/sign-in');
+        }
+      }); 
+      
+      
+    }
+    else{
+      //didn't have user in cookies means no user_info
+   return res.redirect('/users/sign-in');
+   }
 }
 
 
@@ -39,7 +56,7 @@ module.exports.create = function(req,res){
 
      if(!user){
          User.create(req.body, function(err,user){
-            if(err){console.log('error in creating user while siging up'); return}
+            if(err){console.log('error in creating user while signing up'); return}
              
               return  res.redirect('/users/sign-in');  
           })
@@ -53,4 +70,5 @@ module.exports.create = function(req,res){
 //sign in and create a session for the user
 module.exports.createSession = function(req,res){
   //TODO later
+   return res.redirect('/'); 
 }
