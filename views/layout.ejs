@@ -1,23 +1,28 @@
 <html>
     <head>
-  <title>
-    <%= title %> 
-  </title>
-  <link rel="stylesheet" href="/css/layout.css">
-  <!-- helps in placing styles(other css's ex: user_profile.css) in correct place -->
-  <%- style %> 
+        <title>
+            <%= title  %>
+        </title>
+        <link rel="stylesheet" href="/css/layout.css">
+        <link rel="stylesheet" href="/css/header.css">
+        <link rel="stylesheet" href="/css/footer.css">
+
+        <%- style %>
+        
     </head>
 
     <body>
-
-        <!-- to include _header file here -->
-        <%- include('_header'); %> 
-       
-        <!-- variable -->
-       <%- body %>
+        <%- include('_header'); %>
         
-        <%- include('_footer'); %> 
-       <script src="layout.js"> </script>
-       <%- script %>
+        <main id="layout-main">
+            <%- body %>
+
+        </main>
+
+
+        <%- include('_footer'); %>
+
+        <%- script %>
+        
     </body>
 </html>
