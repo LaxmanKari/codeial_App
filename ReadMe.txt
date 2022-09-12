@@ -1,1 +1,1 @@
-This is a chatting application 
+This is a chatting application which is currently in deveopment state. 
