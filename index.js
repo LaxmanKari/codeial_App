@@ -12,6 +12,8 @@ const MongoStore = require('connect-mongo')(session);
 const sassMiddleware = require('node-sass-middleware');
 const flash = require('connect-flash'); 
 const customMware = require('./config/middleware');
+// Importing the jsdom module
+// const jsdom = require("jsdom");
 
 app.use(sassMiddleware({
     src:'./assests/scss', 
