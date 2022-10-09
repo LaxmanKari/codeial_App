@@ -1,3 +1,6 @@
+//can create a new ticket for this , as the two doubts are different, also you will be able to resolve two tickets.
+
+
 {   
     // method to submit the form data for new post using AJAX
     let createPost = function(){
