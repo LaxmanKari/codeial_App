@@ -1,18 +1,3 @@
-.......................TODO LIST..............................
+TODO :
 
-Here’s the list of things you need to do:
-a) Add Noty to all the request responses
-
-b) Show the user's name with the post added dynamically 
-
-HINT: Use populate for getting the user, but remember to not send user’s password back in the response!
-
-c) Add AJAX deletion to all the posts which are already present on the page (before adding a new one)
-
-HINT: Very simple: Reuse the function created, just loop over all the delete links for posts on the page and call it for each of them!
-
-d) Add/Remove comments dynamically with AJAX
-
-HINT: Figure it out on your own! There’s just one tricky case which you’ll automatically find out
-
-
+IMPLEMENT FORGOT PASSWORD FEATURE 
